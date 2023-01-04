@@ -1,3 +1,6 @@
+data("square_data")
+data("hexagonal_data")
+
 test_that(desc = "inappropriate x",
           code = {
             expect_error(object = LandComp(x = TRUE, aggregation_steps = 1))

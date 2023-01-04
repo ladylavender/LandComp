@@ -1,3 +1,6 @@
+data("square_data")
+data("hexagonal_data")
+
 test_that(desc = "inappropriate aggregation_step",
           code = {
             expect_error(object = calculate_SpatialUnitSize(aggregation_step = TRUE, square = TRUE))
