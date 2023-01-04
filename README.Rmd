@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+<!-- Readme document of LandComp R package -->
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# LandComp
+LandComp is a package for quantifying landscape diversity and structure at
+multiple scales. Juhász-Nagy's functions, i.e. compositional diversity and
+associatum are used for these purposes.
+## Installation
+You can install the development version of LandComp using the following command:
+``` r
+install.packages("devtools")
+devtools::install_github("ladylavender/LandComp")
+```
+## Example ### Example for using regular square grid Suggest we have data on
+some vegetation types along a landscape. Note, there are three requirements:
+* the landscape data should be binary (0 or 1)
+* the geometry of the landscape data should be a regular square or hexagonal grid
+* the geometry of the landscape data should have projected coordinates 
+(i.e. WGS84 is useless)
+```{r square_data, echo = FALSE}
+library("sf")
+library(LandComp)
+data("square_data")
+plot(square_data)
+print(str(square_data))
+```
+Two values of landscape diversity and structure can be calculated as e.g.
+```{r square_example, echo=TRUE}
+LandComp(x = square_data, aggregation_steps = 0:1)
+```
+### Example for using regular hexagonal grid
+```{r hexagonal_data, echo = FALSE}
+data("hexagonal_data")
+plot(hexagonal_data)
+print(str(hexagonal_data))
+```
+```{r hexagonal_example, echo=TRUE}
+LandComp(x = hexagonal_data, aggregation_steps = 0:1)
+```
