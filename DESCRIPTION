@@ -1,0 +1,35 @@
+Package: LandComp
+Title: LandComp: a package for analysing landscape composition and
+    structure at multiple scales
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Krisztina Dóra", "Konrád", , "konrad.krisztina@ecolres.hu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-4414-8766")),
+    person("Ákos", "Bede-Fazekas", , "bfakos@ecolres.hu", role = "aut",
+           comment = c(ORCID = "0000-0002-2905-338X")),
+    person("Sándor", "Bartha", role = "aut",
+           comment = c(ORCID = "0000-0001-6331-7521")),
+    person("Imelda", "Somodi", role = "aut",
+           comment = c(ORCID = "0000-0002-6207-3796"))
+  )
+Description: Changes of landscape diversity and structure can be detected
+    soon if relying on landscape class combinations and analysing patterns
+    at multiple scales. LandComp provides such an opportunity, based on
+    Juhász-Nagy's functions. Functions can handle multilayered data.
+License: MIT + file LICENSE
+Suggests: 
+    testthat
+Encoding: UTF-8
+Language: En
+Requirements regarding the input: binary data contained by a regular
+    square or hexagonal grid, and the grid should have projected
+    coordinates.
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports: 
+    future,
+    future.apply,
+    sf
+Depends: 
+    R (>= 2.10)
+LazyData: true
