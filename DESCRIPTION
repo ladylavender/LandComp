@@ -1,6 +1,6 @@
 Package: LandComp
-Title: LandComp: a package for analysing landscape composition and
-    structure at multiple scales
+Title: a package for analysing landscape composition and structure at
+    multiple scales
 Version: 0.0.0.9000
 Authors@R: c(
     person("Krisztina Dóra", "Konrád", , "konrad.krisztina@ecolres.hu", role = c("aut", "cre"),
