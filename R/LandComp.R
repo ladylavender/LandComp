@@ -140,9 +140,9 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
   } else {
     future::plan("future::sequential")
   }
-  default_maxGlobalSize <- options(future.globals.maxSize = Inf)
+  default_maxGlobalSize <- options(future.globals.maxSize = Inf, future.rng.onMisuse = "ignore")
   on.exit(expr = future::plan(default_strategy_of_plan), add = TRUE)
-  on.exit(expr = options(future.globals.maxSize = default_maxMemorySize), add = TRUE)
+  on.exit(expr = options(future.globals.maxSize = default_maxGlobalSize), add = TRUE)
   number_of_vertices <- unlist(future.apply::future_lapply(X = 1:length(geometry), future.seed = NULL, FUN = function(i){length(sf::st_cast(sf::st_boundary(geometry[i]), "POINT")[-1])}))
   if(all(number_of_vertices == 4)) {
     square = TRUE

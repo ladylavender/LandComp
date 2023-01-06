@@ -33,5 +33,3 @@ Imports:
 Depends: 
     R (>= 2.10)
 LazyData: true
-URL: https://github.com/ladylavender/LandComp
-BugReports: https://github.com/ladylavender/LandComp/issues
