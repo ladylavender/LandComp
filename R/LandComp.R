@@ -132,7 +132,7 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
   # Settings related to future package
   system_name <- base::Sys.info()["sysname"]
   default_strategy_of_plan <- if(parallelrun) {
-    if(grepl(pattern = "Linux", x = system_name)){
+    if(future::supportsMulticore()){
       future::plan("future::multicore")
     }else{
       future::plan("future::multisession")
@@ -140,7 +140,9 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
   } else {
     future::plan("future::sequential")
   }
-  default_maxGlobalSize <- options(future.globals.maxSize = Inf, future.rng.onMisuse = "ignore")
+  default_maxGlobalSize <- options(future.globals.maxSize = Inf)
+  on.exit(expr = future::plan(default_strategy_of_plan), add = TRUE)
+  on.exit(expr = options(future.globals.maxSize = default_maxMemorySize), add = TRUE)
   number_of_vertices <- unlist(future.apply::future_lapply(X = 1:length(geometry), future.seed = NULL, FUN = function(i){length(sf::st_cast(sf::st_boundary(geometry[i]), "POINT")[-1])}))
   if(all(number_of_vertices == 4)) {
     square = TRUE
@@ -260,11 +262,11 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
 
       # Aggregating by maximum
       aggregated_data_list <- future.apply::future_lapply(X = entirely_covered_gridcellIDs, future.seed = NULL, FUN = function(gridcells_to_aggregate){
-				 if(length(x)>1){ apply(x[gridcells_to_aggregate,], MARGIN = 2, FUN = max) # KKD modositotta 2023 01 04
+				 if(length(x)>1){ apply(x[gridcells_to_aggregate,], MARGIN = 2, FUN = base::max) # KKD modositotta 2023 01 04
          }else{ max(x[gridcells_to_aggregate,])}# KKD modositotta 2023 01 04
       })
 
-      aggregated_data <- as.data.frame(do.call(what = rbind, args = aggregated_data_list))
+      aggregated_data <- as.data.frame(do.call(what = base::rbind, args = aggregated_data_list))
       rm(list = c("aggregated_data_list", "buffer", "entirely_covered_gridcellIDs", "mask"))
     } # if - whether aggregation is needed
 
@@ -278,7 +280,7 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
     results[mask_of_rows, "SpatialUnit_Area"] <- SpatialUnit_Size * gridcell_area
 
     # Calculating compositional diversity
-    combinations <- apply(aggregated_data, MARGIN = 1, FUN = paste0, collapse="")
+    combinations <- base::apply(aggregated_data, MARGIN = 1, FUN = paste0, collapse="")
     p_combinations <- as.vector(table(combinations)/SpatialUnit_Count) # proportion of the unique landscape class combinations
     CD <- - sum(p_combinations * log2(p_combinations))
     results[mask_of_rows, "CD_bit"] <- CD
@@ -295,7 +297,5 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
 
   }# for - aggregation step
   attr(x = results, which = "unit") <- sf::st_crs(geometry)$units_gdal
-  future::plan(default_strategy_of_plan)
-  options(future.globals.maxSize = default_maxGlobalSize)
   return(results)
 }
