@@ -213,33 +213,15 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
 
       # Defining grid cell IDs covered by the buffer
       if(aggregation_step == sorted_aggregation_steps[1] | savememory){
-        st_par <- function(X, FUN, ...){
-          n_workers <- future::nbrOfWorkers()
-          if ("sf" %in% class(X)) {
-            n_elements <- nrow(X)
-          } else if ("sfc" %in% class(X)) {
-            n_elements <- length(X)
-          } else {
-            stop("Unknown input class. st_par() only accepts the following inputs: sfc, sf.")
-          }
-          fold_length <- floor(n_elements / n_workers)
-          split_vector <- rep(x = 1:n_workers, times = c(rep(x = fold_length, times = n_workers - 1), n_elements - fold_length * (n_workers - 1)))
-          split_results <- future.apply::future_lapply(X = split(X, split_vector), function(x) FUN(x, ...))
-          output_class <- class(split_results[[1]])
-          if (length(output_class) == 2) output_class <- output_class[2]
-          if (output_class == "sfc") {
-            result <- do.call("c", split_results)
-            result <- FUN(result)
-          } else if (output_class %in% c('list', 'sgbp') ){
-            result <- do.call("c", split_results)
-            names(result) <- NULL
-          } else {
-            stop("Unknown output class. st_par() only accepts the following outputs: sfc, list, sf, sgbp.")
-          }
-          return(result)
-        } # end of st_par()
-
-        covered_gridcellIDs <- st_par(X = buffer, FUN = sf::st_contains, y = centroid)
+        n_workers <- future::nbrOfWorkers()
+        n_elements <- length(buffer)
+        fold_length <- floor(n_elements / n_workers)
+        split_vector <- rep(x = 1:n_workers, times = c(rep(x = fold_length, times = n_workers - 1), n_elements - fold_length * (n_workers - 1)))
+        split_results <- future.apply::future_lapply(X = split(buffer, split_vector), function(buffer_split) sf::st_contains(x = buffer_split, y = centroid))
+        output_class <- class(split_results[[1]])
+        if (length(output_class) == 2) output_class <- output_class[2]
+        covered_gridcellIDs <- do.call("c", split_results)
+        names(covered_gridcellIDs) <- NULL
       }else{ # When parallelization is not applied, to make faster the running, covered gridcellIDs are selected from that of the previous step.
 	      covered_gridcellIDs <- future.apply::future_lapply(X = 1: length(covered_gridcellIDs), future.seed = NULL, FUN = function(i) {
 	       ith_covered_gridcellIDs <- covered_gridcellIDs[[i]]
