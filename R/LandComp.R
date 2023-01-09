@@ -218,8 +218,6 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
         fold_length <- floor(n_elements / n_workers)
         split_vector <- rep(x = 1:n_workers, times = c(rep(x = fold_length, times = n_workers - 1), n_elements - fold_length * (n_workers - 1)))
         split_results <- future.apply::future_lapply(X = split(buffer, split_vector), function(buffer_split) sf::st_contains(x = buffer_split, y = centroid))
-        output_class <- class(split_results[[1]])
-        if (length(output_class) == 2) output_class <- output_class[2]
         covered_gridcellIDs <- do.call("c", split_results)
         names(covered_gridcellIDs) <- NULL
       }else{ # When parallelization is not applied, to make faster the running, covered gridcellIDs are selected from that of the previous step.
