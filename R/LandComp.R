@@ -1,10 +1,10 @@
-#' @encoding UTF-8
 #'LandComp: quantify landscape diversity and structure
 #'
 #'Calculate compositional diversity and associatum of landscape data at
 #'different spatial scales.
 #'
-#'@param x An \code{sf} object of type \code{"POLYGON"} that must have projected
+#'@encoding UTF-8
+#'@param x An `sf` object of type `POLYGON` that must have projected
 #'  coordinates (i.e. WGS-84 is not accepted). Geometry must be a regular
 #'  spatial grid containing either squares or hexagons. Both flat topped and
 #'  pointy topped hexagons are accepted. Fields should contain binary integer
@@ -19,34 +19,51 @@
 #'  the case of hexagonal grid, steps falling in the interval ]0,1[ cannot be
 #'  evaluated. Negative, non-finite and missing values are ignored with warning.
 #'@param parallelrun A logical vector of length one indicating whether
-#'  aggregation should be performed in a parallel way (defaults to \code{TRUE}).
+#'  aggregation should be performed in a parallel way (defaults to `TRUE`).
 #'  All available processor cores are used in the case of parallel processing.
-#'  Should be set to \code{FALSE} if memory limitation occurs.
+#'  Should be set to `FALSE` if memory limitation occurs.
 #'@param savememory A logical vector of length one indicating whether a slower
-#'  but less memory-demanding algorithm should run (defaults to \code{FALSE}).
-#'  Should be set to \code{TRUE} if the available memory is limited.
+#'  but less memory-demanding algorithm should run (defaults to `FALSE`).
+#'  Should be set to `TRUE` if the available memory is limited.
 #'@param precision A numeric vector of length one. Number of digits to which the
 #'  areas of grid cells are rounded. Should be decreased if the grid is not
 #'  perfectly regular and the equality check of the grid cells' area fails.
 
 #'
-#'@return A \code{data.frame} of \code{length(aggregation_steps)} rows with the
-#'  following columns and attribute:
+#'@return A `data.frame` of `length(aggregation_steps)` rows with the following
+#'  columns and attribute:
 #' * **AggregationStep**: size of the spatial units measured by
 #'  the number of rows of grid cells around the central grid cell. The content
 #'  (and order) of this column is the same as the parameter
 #'  \code{aggregation_steps} except that negative, non-finite and missing values
-#'  are removed. It is a sort of ID in the resulted \code{data.frame}.
+#'  are removed. It is a sort of ID in the resulted `data.frame`.
 #' * **SpatialUnit_Size**: number of grid cells contained by the aggregated,
-#' large unit.
+#'  large unit.
 #' * **SpatialUnit_Area**: area of the aggregated, large unit
 #' * **SpatialUnit_Count**: sample size.
 #' * **UniqueCombination_Count**: number of unique landscape class combinations.
-#' * **CD_bit**: compositional diversity (sensu Juhász-Nagy) of \code{x}.
-#' * **AS_bit**: associatum (sensu Juhász-Nagy) of  \code{x}
-#' * **attr(\*, "unit")**: unit of the CRS of the object provided to \code{x}.
+#' * **CD_bit**: compositional diversity (sensu Juhász-Nagy) of `x`.
+#' * **AS_bit**: associatum (sensu Juhász-Nagy) of  `x`
+#' * **attr(\*, "unit")**: unit of the CRS of the object provided to `x`.
 #'
-#'@export
+#'@details The function is based on the model family created by Juhász-Nagy
+#'  (1976, 1984, 1993). Compositional diversity (\eqn{CD}) measures the
+#'  diversity of landscape class combinations. Associatum (\eqn{AS})
+#'  characterizes the spatial dependence of landscape classes. It is measured as
+#'  the difference of the "random" diversity (i.e. predicted diversity with the
+#'  assumption of independence) and the observed diversity. Both functions have
+#'  typically one maximum (\eqn{CD_m}\eqn{_a}\eqn{_x},
+#'  \eqn{AS_m}\eqn{_a}\eqn{_x}), when plotting against scale. Unit sizes
+#'  corresponding to the maxima values of both functions (\eqn{A_C}\eqn{_D},
+#'  \eqn{A_A}\eqn{_S}) help to capture the spatial scale holding the most
+#'  information. These indices, particularly \eqn{CD_m}\eqn{_a}\eqn{_x},
+#'  \eqn{AS_m}\eqn{_a}\eqn{_x}, \eqn{A_C}\eqn{_D} can be effectively used as
+#'  indicators (Juhász-Nagy & Podani 1983, Konrád et al. submitted). Though the
+#'  functions were originally applied in community ecology, their application in
+#'  landscape context can support assessment of landscapes (Konrád et al.
+#'  submitted). Konrád et al. (submitted) also shows an example of analyzing
+#'  landscape data using Juhász-Nagy's functions.
+#'
 #'@keywords landscape diversity, multilayer analysis, Juhász-Nagy's functions
 #'
 #'@examples
@@ -67,6 +84,9 @@
 #'249:173–182.
 #' * Juhász-Nagy P, Podani J (1983) Information theory methods for the study of
 #'spatial processes and succession. Vegetatio 51:129–140.
+#' * Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (submitted) Novel, multiscale approach to assess compositional diversity of landscapes.
+#'
+#'@export
 #'
 LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRUE, savememory = FALSE, precision = 4){
   # Checking required packages
@@ -89,11 +109,15 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
   if(!all_geometries_are_polygon) stop("Parameter 'x' should contain only data of polygons.")
   if(is.na(sf::st_crs(geometry))){ stop("CRS of parameter 'x' should be set but found to be missing.")
   }else if(sf::st_is_longlat(geometry)) stop("Parameter 'x' should have projected coordinates. Resampling and application of another CRS is suggested.")
-  if(!all(sort(unique(unlist(x))) %in% c(0,1)) ) stop(paste0("Parameter 'x' should contain binary data, with 0 (absence) and 1 (presence) data. However, other values are found: ", paste0(utils::head(sort(unique(unlist(x))), 10), collapse = ", ")))
-  if(is.logical(x)){
-    x <- as.integer(x)
+  if(any(apply(x, MARGIN = 2, FUN = is.logical))){
+    x <- apply(x, MARGIN = 2, FUN = as.integer)
     warning("Parameter 'x' was found holding a logical data though integer is required. Coercion is done.")
   }
+  if(any(apply(x, MARGIN = 2, FUN = function(column){class(column) == "character"}))){
+    x <- apply(x, MARGIN = 2, FUN = function(column){as.integer(as.character(column))})
+    warning("Parameter 'x' was found holding data of class character though integer is required. Coercion is done.")
+  }
+  if(!all(sort(unique(unlist(x))) %in% c(0,1)) ) stop(paste0("Parameter 'x' should contain binary data, with 0 (absence) and 1 (presence) data. However, other values are found: ", paste0(utils::head(sort(unique(unlist(x))), 10), collapse = ", ")))
   if(length(aggregation_steps)<1) stop("Parameter 'aggregation_steps' should be set.")
   if(any(is.na(aggregation_steps))){
     aggregation_steps <- aggregation_steps[!is.na(aggregation_steps)]

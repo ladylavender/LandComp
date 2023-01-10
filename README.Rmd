@@ -7,14 +7,15 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  #out.width = "100%",
+  fig.width = 10, fig.height = 5
 )
 ```
 
 # LandComp
 
 LandComp is a package for quantifying landscape diversity and structure at
-multiple scales. Juhász-Nagy's functions, i.e. compositional diversity and
+multiple scales. Juh`r "\U00E1"`sz-Nagy's functions, i.e. compositional diversity and
 associatum are used for these purposes.
 
 ## Installation
@@ -32,11 +33,11 @@ devtools::install_github("ladylavender/LandComp")
 
 Suggest we have data on some vegetation types along a landscape. Note, there are three requirements:
 
-* the landscape data should be binary (0 or 1)
+* the landscape data should be numeric binary, i.e. it should contain 0 or 1 values
 * the geometry of the landscape data should be a regular square or hexagonal grid
 * the geometry of the landscape data should have projected coordinates (i.e. WGS84 is useless)
 
-```{r square_data, echo = FALSE}
+```{r square_data, echo = TRUE}
 suppressPackageStartupMessages(library("sf"))
 library(LandComp)
 data("square_data")
@@ -52,7 +53,7 @@ LandComp(x = square_data, aggregation_steps = 0:1)
 
 ### Example for using regular hexagonal grid
 
-```{r hexagonal_data, echo = FALSE}
+```{r hexagonal_data, echo = TRUE}
 data("hexagonal_data")
 plot(hexagonal_data)
 str(hexagonal_data)

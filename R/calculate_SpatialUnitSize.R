@@ -12,8 +12,8 @@
 #'  its vertices are used as spatial base units. Note, in the case of hexagonal
 #'  grid, steps falling in the interval ]0,1[ cannot be evaluated. Negative,
 #'  non-finite and missing values are ignored with warning.
-#'@param square A logical vector of length one. Should be \code{TRUE} if square
-#'  grid, \code{FALSE}, if is hexagonal grid is used as the basis of
+#'@param square A logical vector of length one. Should be `TRUE` if square
+#'  grid, `FALSE`, if is hexagonal grid is used as the basis of
 #'  calculation.
 #'
 #'@return A numeric vector of length one.
