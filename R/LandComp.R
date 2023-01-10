@@ -44,7 +44,7 @@
 #' * **UniqueCombination_Count**: number of unique landscape class combinations.
 #' * **CD_bit**: compositional diversity (sensu Juhász-Nagy) of `x`.
 #' * **AS_bit**: associatum (sensu Juhász-Nagy) of  `x`
-#' * **attr(\*, "unit")**: unit of the CRS of the object provided to `x`.
+#' * **attr(*, "unit")**: unit of the CRS of the object provided to `x`.
 #'
 #'@details The function is based on the model family created by Juhász-Nagy
 #'  (1976, 1984, 1993). Compositional diversity (\eqn{CD}) measures the
@@ -113,7 +113,7 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
     x <- apply(x, MARGIN = 2, FUN = as.integer)
     warning("Parameter 'x' was found holding a logical data though integer is required. Coercion is done.")
   }
-  if(any(apply(x, MARGIN = 2, FUN = function(column){class(column) == "character"}))){
+  if(any(apply(x, MARGIN = 2, FUN = function(column){class(column) %in% c("character", "factor")}))){
     x <- apply(x, MARGIN = 2, FUN = function(column){as.integer(as.character(column))})
     warning("Parameter 'x' was found holding data of class character though integer is required. Coercion is done.")
   }

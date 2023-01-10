@@ -38,6 +38,6 @@ foo
 
 vapply(c(0, 1, 1.5, 2, 3), FUN = function(i){
   calculate_SpatialUnitSize(aggregation_step = i, square = FALSE)},
-  FUN.VALUE = numeric(length = 1) )
+  FUN.VALUE = numeric(length = 1))
 
 }

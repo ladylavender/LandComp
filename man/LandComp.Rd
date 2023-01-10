@@ -59,7 +59,7 @@ large unit.
 \item \strong{UniqueCombination_Count}: number of unique landscape class combinations.
 \item \strong{CD_bit}: compositional diversity (sensu Juhász-Nagy) of \code{x}.
 \item \strong{AS_bit}: associatum (sensu Juhász-Nagy) of  \code{x}
-\item \strong{attr(\*, "unit")}: unit of the CRS of the object provided to \code{x}.
+\item \strong{attr(*, "unit")}: unit of the CRS of the object provided to \code{x}.
 }
 }
 \description{
