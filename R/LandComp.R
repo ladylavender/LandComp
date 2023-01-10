@@ -52,17 +52,14 @@
 #'  characterizes the spatial dependence of landscape classes. It is measured as
 #'  the difference of the "random" diversity (i.e. predicted diversity with the
 #'  assumption of independence) and the observed diversity. Both functions have
-#'  typically one maximum (\eqn{CD_m}\eqn{_a}\eqn{_x},
-#'  \eqn{AS_m}\eqn{_a}\eqn{_x}), when plotting against scale. Unit sizes
-#'  corresponding to the maxima values of both functions (\eqn{A_C}\eqn{_D},
-#'  \eqn{A_A}\eqn{_S}) help to capture the spatial scale holding the most
-#'  information. These indices, particularly \eqn{CD_m}\eqn{_a}\eqn{_x},
-#'  \eqn{AS_m}\eqn{_a}\eqn{_x}, \eqn{A_C}\eqn{_D} can be effectively used as
-#'  indicators (Juhász-Nagy & Podani 1983, Konrád et al. submitted). Though the
-#'  functions were originally applied in community ecology, their application in
-#'  landscape context can support assessment of landscapes (Konrád et al.
-#'  submitted). Konrád et al. (submitted) also shows an example of analyzing
-#'  landscape data using Juhász-Nagy's functions.
+#'  typically one maximum (\eqn{CD_{max}}, \eqn{AS_{max}}), when plotting
+#'  against scale. Unit sizes corresponding to the maxima values of both
+#'  functions (\eqn{A_{CD}}, \eqn{A_{AS}}) help to capture the spatial scale
+#'  holding the most information. These indices, particularly \eqn{CD_{max}},
+#'  \eqn{AS_{max}} and \eqn{A_{CD}} can be effectively used as indicators
+#'  (Juhász-Nagy & Podani 1983). Though the functions were originally applied in
+#'  community ecology, their application in landscape context can support
+#'  assessment of landscapes.
 #'
 #'@keywords landscape diversity, multilayer analysis, Juhász-Nagy's functions
 #'
@@ -84,7 +81,6 @@
 #'249:173–182.
 #' * Juhász-Nagy P, Podani J (1983) Information theory methods for the study of
 #'spatial processes and succession. Vegetatio 51:129–140.
-#' * Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (submitted) Novel, multiscale approach to assess compositional diversity of landscapes.
 #'
 #'@export
 #'
