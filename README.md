@@ -44,7 +44,6 @@ there are three requirements:
     #>  - attr(*, "sf_column")= chr "geometry"
     #>  - attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA NA NA NA NA
     #>   ..- attr(*, "names")= chr [1:5] "VT1" "VT2" "VT3" "VT4" ...
-    #> NULL
 
 Two values of landscape diversity and structure can be calculated as
 e.g.
@@ -75,7 +74,6 @@ LandComp(x = square_data, aggregation_steps = 0:1)
     #>  - attr(*, "sf_column")= chr "geometry"
     #>  - attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: NA NA NA NA NA
     #>   ..- attr(*, "names")= chr [1:5] "VT1" "VT2" "VT3" "VT4" ...
-    #> NULL
 
 ``` r
 LandComp(x = hexagonal_data, aggregation_steps = 0:1)

@@ -41,7 +41,7 @@ suppressPackageStartupMessages(library("sf"))
 library(LandComp)
 data("square_data")
 plot(square_data)
-print(str(square_data))
+str(square_data)
 ```
 
 Two values of landscape diversity and structure can be calculated as e.g.
@@ -55,7 +55,7 @@ LandComp(x = square_data, aggregation_steps = 0:1)
 ```{r hexagonal_data, echo = FALSE}
 data("hexagonal_data")
 plot(hexagonal_data)
-print(str(hexagonal_data))
+str(hexagonal_data)
 ```
 
 ```{r hexagonal_example, echo=TRUE}
