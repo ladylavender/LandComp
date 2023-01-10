@@ -1,3 +1,4 @@
+#' @encoding UTF-8
 #'LandComp: quantify landscape diversity and structure
 #'
 #'Calculate compositional diversity and associatum of landscape data at
@@ -6,7 +7,7 @@
 #'@param x An \code{sf} object of type \code{"POLYGON"} that must have projected
 #'  coordinates (i.e. WGS-84 is not accepted). Geometry must be a regular
 #'  spatial grid containing either squares or hexagons. Both flat topped and
-#'  pointy topped hexagons arerotated_geometry_of_the_selected_gridcell accepted. Fields should contain binary integer
+#'  pointy topped hexagons are accepted. Fields should contain binary integer
 #'  values (i.e., 0s and 1s). Logical values are coerced with warning.
 #'@param aggregation_steps A numeric vector containing non-negative numbers. The
 #'  vector elements express the size of the spatial units for which calculation
@@ -43,7 +44,7 @@
 #' * **UniqueCombination_Count**: number of unique landscape class combinations.
 #' * **CD_bit**: compositional diversity (sensu Juhász-Nagy) of \code{x}.
 #' * **AS_bit**: associatum (sensu Juhász-Nagy) of  \code{x}
-#' * **attr(*, "unit")**: unit of the CRS of the object provided to \code{x}.
+#' * **attr(\*, "unit")**: unit of the CRS of the object provided to \code{x}.
 #'
 #'@export
 #'@keywords landscape diversity, multilayer analysis, Juhász-Nagy's functions
