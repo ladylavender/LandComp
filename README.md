@@ -5,7 +5,10 @@
 
 LandComp is a package for quantifying landscape diversity and structure
 at multiple scales. Juhász-Nagy’s functions, i.e. compositional
-diversity and associatum are used for these purposes. \## Installation
+diversity and associatum are used for these purposes.
+
+## Installation
+
 You can install the development version of LandComp using the following
 command:
 
@@ -14,15 +17,18 @@ install.packages("devtools")
 devtools::install_github("ladylavender/LandComp")
 ```
 
-## Example \### Example for using regular square grid Suggest we have data on
+## Example
 
-some vegetation types along a landscape. Note, there are three
-requirements: \* the landscape data should be binary (0 or 1) \* the
-geometry of the landscape data should be a regular square or hexagonal
-grid \* the geometry of the landscape data should have projected
-coordinates (i.e. WGS84 is useless)
+### Example for using regular square grid
 
-    #> Linking to GEOS 3.9.1, GDAL 3.4.3, PROJ 7.2.1; sf_use_s2() is TRUE
+Suggest we have data on some vegetation types along a landscape. Note,
+there are three requirements:
+
+-   the landscape data should be binary (0 or 1)
+-   the geometry of the landscape data should be a regular square or
+    hexagonal grid
+-   the geometry of the landscape data should have projected coordinates
+    (i.e. WGS84 is useless)
 
 <img src="man/figures/README-square_data-1.png" width="100%" />
 
