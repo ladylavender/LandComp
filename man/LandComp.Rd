@@ -68,19 +68,25 @@ different spatial scales.
 }
 \details{
 The function is based on the model family created by Juhász-Nagy
-(1976, 1984, 1993). Compositional diversity (\eqn{CD}) measures the
-diversity of landscape class combinations. Associatum (\eqn{AS})
+(1976, 1984, 1993). Compositional diversity
+(\ifelse{html}{\out{CD}}{\eqn{CD}}) measures the diversity of landscape
+class combinations. Associatum (\ifelse{html}{\out{AS}}{\eqn{AS}})
 characterizes the spatial dependence of landscape classes. It is measured as
 the difference of the "random" diversity (i.e. predicted diversity with the
 assumption of independence) and the observed diversity. Both functions have
-typically one maximum (\eqn{CD_{max}}, \eqn{AS_{max}}), when plotting
+typically one maximum
+(\ifelse{html}{\out{CD<sub>max</sub>}}{\eqn{CD_{max}}},
+\ifelse{html}{\out{AS<sub>max</sub>}}{\eqn{AS_{max}}}), when plotting
 against scale. Unit sizes corresponding to the maxima values of both
-functions (\eqn{A_{CD}}, \eqn{A_{AS}}) help to capture the spatial scale
-holding the most information. These indices, particularly \eqn{CD_{max}},
-\eqn{AS_{max}} and \eqn{A_{CD}} can be effectively used as indicators
-(Juhász-Nagy & Podani 1983). Though the functions were originally applied in
-community ecology, their application in landscape context can support
-assessment of landscapes.
+functions (\ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{CD}}},
+\ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{AS}}}) help to capture the
+spatial scale holding the most information. These indices, particularly
+\ifelse{html}{\out{CD<sub>max</sub>}}{\eqn{CD_{max}}},
+\ifelse{html}{\out{AS<sub>max</sub>}}{\eqn{AS_{max}}} and
+\ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{CD}}} can be effectively used as
+indicators (Juhász-Nagy & Podani 1983). Though the functions were originally
+applied in community ecology, their application in landscape context can
+support assessment of landscapes.
 }
 \examples{
 data(square_data)
