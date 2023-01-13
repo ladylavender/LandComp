@@ -29,13 +29,15 @@ devtools::install_github("ladylavender/LandComp")
 
 ## Example
 
-### Example for using regular square grid
-
 Suggest we have data on some vegetation types along a landscape. Note, there are three requirements:
 
 * the landscape data should be numeric binary, i.e. it should contain 0 or 1 values
 * the geometry of the landscape data should be a regular square or hexagonal grid
 * the geometry of the landscape data should have projected coordinates (i.e. WGS84 is useless)
+
+### Example for using regular square grid
+
+Let's have a look at the square grid data.
 
 ```{r square_data, echo = TRUE}
 suppressPackageStartupMessages(library("sf"))
@@ -45,13 +47,15 @@ plot(square_data)
 str(square_data)
 ```
 
-Two values of landscape diversity and structure can be calculated as e.g.
+Two values of CD and AS measuring landscape diversity and structure can be calculated as e.g.
 
 ```{r square_example, echo=TRUE}
 LandComp(x = square_data, aggregation_steps = 0:1)
 ```
 
 ### Example for using regular hexagonal grid
+
+Let's have a look at the hexagonal grid data.
 
 ```{r hexagonal_data, echo = TRUE}
 data("hexagonal_data")

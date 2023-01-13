@@ -26,7 +26,7 @@ of compositional diversity and associatum is required. The size is measured
 by the number of rows of grid cells around the central grid cell, where 0
 means the original grid cell without enlargement. Analysis can be done more
 precise by giving also fraction numbers as input. In this case the following
-step's rosette minus its vertices are used as spatial base units. Note, in
+step's spatial unit minus its vertices are used as spatial base units. Note, in
 the case of hexagonal grid, steps falling in the interval ]0,1[ cannot be
 evaluated. Negative, non-finite and missing values are ignored with warning.}
 

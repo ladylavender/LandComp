@@ -6,11 +6,7 @@ Authors@R: c(
     person("Krisztina Dóra", "Konrád", , "konrad.krisztina@ecolres.hu", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-4414-8766")),
     person("Ákos", "Bede-Fazekas", , "bfakos@ecolres.hu", role = "aut",
-           comment = c(ORCID = "0000-0002-2905-338X")),
-    person("Sándor", "Bartha", role = "aut",
-           comment = c(ORCID = "0000-0001-6331-7521")),
-    person("Imelda", "Somodi", role = "aut",
-           comment = c(ORCID = "0000-0002-6207-3796"))
+           comment = c(ORCID = "0000-0002-2905-338X"))
   )
 Description: Changes of landscape diversity and structure can be detected
     soon if relying on landscape class combinations and analysing patterns
@@ -18,6 +14,8 @@ Description: Changes of landscape diversity and structure can be detected
     Juhász-Nagy's functions. Functions can handle multilayered data.
 License: MIT + file LICENSE
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat
 Encoding: UTF-8
 Language: En
@@ -33,3 +31,4 @@ Imports:
 Depends: 
     R (>= 2.10)
 LazyData: true
+VignetteBuilder: knitr
