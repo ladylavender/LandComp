@@ -15,8 +15,8 @@ knitr::opts_chunk$set(
 # LandComp
 
 LandComp is a package for quantifying landscape diversity and structure at
-multiple scales. Juh`r "\U00E1"`sz-Nagy's functions, i.e. compositional diversity and
-associatum are used for these purposes.
+multiple scales. For these purposes Juhász-Nagy's functions, i.e. compositional 
+diversity (CD) and associatum (AS), are calculated
 
 ## Installation
 

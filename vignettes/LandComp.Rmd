@@ -18,12 +18,9 @@ knitr::opts_chunk$set(
 library(LandComp)
 ```
 
-
-# LandComp
-
 LandComp is a package for quantifying landscape diversity and structure at
-multiple scales. Juhász-Nagy's functions, i.e. compositional diversity (CD) and
-associatum (AS) are used for these purposes.
+multiple scales. For these purposes Juhász-Nagy's functions, i.e. compositional 
+diversity (CD) and associatum (AS), are calculated.
 
 ## Installation
 
@@ -34,7 +31,7 @@ install.packages("devtools")
 devtools::install_github("ladylavender/LandComp")
 ```
 
-## Example
+## Examples
 
 Suggest we have data on some vegetation types along a landscape. Note, there are three requirements:
 
@@ -53,7 +50,7 @@ data("square_data")
 str(square_data)
 ```
 
-```{r out.width = '80%', echo = FALSE}
+```{r out.width = '100%', echo = FALSE}
 filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
 knitr::include_graphics(paste0(filepath, "/README-square_data-1.png"))
 ```
@@ -68,7 +65,7 @@ LandComp(x = square_data, aggregation_steps = 0)
 
 However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using rows of grid cells around the central grid cell, where 0 means the original cell without enlargement.
 
-```{r out.width = '80%', echo = FALSE}
+```{r out.width = '50%', echo = FALSE}
 filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
 knitr::include_graphics(paste0(filepath, "/spatial_units_square.png"))
 ```
@@ -88,11 +85,10 @@ Let's have a look at the hexagonal grid data.
 
 ```{r hexagonal_data, echo = TRUE}
 data("hexagonal_data")
-plot(hexagonal_data)
 str(hexagonal_data)
 ```
 
-```{r out.width = '80%', echo = FALSE}
+```{r out.width = '100%', echo = FALSE}
 filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
 knitr::include_graphics(paste0(filepath, "/README-hexagonal_data-1.png"))
 ```
@@ -107,7 +103,7 @@ LandComp(x = hexagonal_data, aggregation_steps = 0)
 
 However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using rows of grid cells around the central grid cell, where 0 means the original cell without enlargement.
 
-```{r out.width = '80%', echo = FALSE}
+```{r out.width = '50%', echo = FALSE}
 filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
 knitr::include_graphics(paste0(filepath, "/spatial_units_hexagon.png"))
 ```
@@ -120,4 +116,4 @@ Analysis can be done more precise by giving also fraction numbers as input. Thus
 LandComp(x = hexagonal_data, aggregation_steps = c(1, 1.5))
 ```
 
-Note, in the case of hexagonal grid, steps falling in the interval ]0,1[ cannot be evaluated. 
+**Note,** in the case of hexagonal grid, steps falling in the interval ]0,1[ cannot be evaluated. 
