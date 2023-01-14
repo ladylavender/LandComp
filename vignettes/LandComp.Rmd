@@ -22,15 +22,6 @@ LandComp is a package for quantifying landscape diversity and structure at
 multiple scales. For these purposes Juhász-Nagy's functions, i.e. compositional 
 diversity (CD) and associatum (AS), are calculated.
 
-## Installation
-
-You can install the development version of LandComp using the following command:
-
-``` r
-install.packages("devtools")
-devtools::install_github("ladylavender/LandComp")
-```
-
 ## Examples
 
 Suggest we have data on some vegetation types along a landscape. Note, there are three requirements:
@@ -70,7 +61,7 @@ filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandCo
 knitr::include_graphics(paste0(filepath, "/spatial_units_square.png"))
 ```
 
-**Fig. 2.** Main properties of the spatial units used for the calculation of compositional diversity (CD) and associatum (AS). In the aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are yielded. *: exception from the general formulas, calculation is given in the bottom of the plot.
+**Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are yielded. Spatial units of fraction aggregation steps are created by removing the vertices of the spatial unit of the next aggregation step. A~s~ is the area of the square grid cell of the input data. 
 
 Analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 
@@ -108,7 +99,7 @@ filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandCo
 knitr::include_graphics(paste0(filepath, "/spatial_units_hexagon.png"))
 ```
 
-**Fig. 3.** Main properties of the spatial units used for the calculation of compositional diversity (CD) and associatum (AS). In the aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are yielded. *: exception from the general formulas, calculation is given in the bottom of the plot.
+**Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are yielded. Spatial units of fraction aggregation steps are created by removing the vertices of the spatial unit of the next aggregation step. A~h~ is the area of the hexagonal grid cell of the input data. 
 
 Analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 
