@@ -28,11 +28,11 @@ Suggest we have data on some vegetation types along a landscape. Note, there are
 
 * the landscape data should be numeric binary, i.e. it should contain 0 or 1 values
 * the geometry of the landscape data should be a regular square or hexagonal grid
-* the geometry of the landscape data should have projected coordinates (i.e. WGS84 is useless)
+* the geometry of the landscape data should have projected coordinates (i.e. WGS84 is not eligible)
 
-### Example for using regular square grid
+### Using regular square grid
 
-Let's have a look at the square grid data.
+Have a look at the square grid data.
 
 ```{r square_data, echo = TRUE}
 suppressPackageStartupMessages(library("sf"))
@@ -54,25 +54,25 @@ CD and AS of the landscape at the scale of the base square grid (i.e. using the 
 LandComp(x = square_data, aggregation_steps = 0)
 ```
 
-However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using rows of grid cells around the central grid cell, where 0 means the original cell without enlargement.
+However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using a buffer of grid cells around the central grid cell, where 0 means the original cell without enlargement.
 
 ```{r out.width = '50%', echo = FALSE}
 filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
 knitr::include_graphics(paste0(filepath, "/spatial_units_square.png"))
 ```
 
-**Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are yielded. Spatial units of fraction aggregation steps are created by removing the vertices of the spatial unit of the next aggregation step. A~s~ is the area of the square grid cell of the input data. 
+**Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are produced. Spatial units of fraction aggregation steps are created by removing the spatial units containing the vertices of the spatial unit of the next aggregation step. A~s~ is the area of the square grid cell of the input data. 
 
-Analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
+The analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 
 ```{r square_example2, echo=TRUE}
 LandComp(x = square_data, aggregation_steps = c(0.5, 1))
 ```
 
-### Example for using regular hexagonal grid
+### Using regular hexagonal grid
 
 The example dataset contains pointy-topped hexagons. Note, the methods are also fine for regular hexagonal grids containing flat-topped hexagons. 
-Let's have a look at the hexagonal grid data.
+Have a look at the hexagonal grid data.
 
 ```{r hexagonal_data, echo = TRUE}
 data("hexagonal_data")
@@ -92,14 +92,14 @@ CD and AS of the landscape at the scale of the base hexagonal grid (i.e. using t
 LandComp(x = hexagonal_data, aggregation_steps = 0)
 ```
 
-However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using rows of grid cells around the central grid cell, where 0 means the original cell without enlargement.
+However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using a buffer of grid cells around the central grid cell, where 0 means the original cell without enlargement.
 
 ```{r out.width = '50%', echo = FALSE}
 filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
 knitr::include_graphics(paste0(filepath, "/spatial_units_hexagon.png"))
 ```
 
-**Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are yielded. Spatial units of fraction aggregation steps are created by removing the vertices of the spatial unit of the next aggregation step. A~h~ is the area of the hexagonal grid cell of the input data. 
+**Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are produced. Spatial units of fraction aggregation steps are created by removing the spatial units containing the vertices of the spatial unit of the next aggregation step. A~h~ is the area of the hexagonal grid cell of the input data. 
 
 Analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 

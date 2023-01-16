@@ -27,11 +27,11 @@ there are three requirements:
 - the geometry of the landscape data should be a regular square or
   hexagonal grid
 - the geometry of the landscape data should have projected coordinates
-  (i.e. WGS84 is useless)
+  (i.e. WGS84 is not eligible)
 
-### Example for using regular square grid
+### Regular square grid data
 
-Let’s have a look at the square grid data.
+Have a look at the square grid data.
 
 ``` r
 suppressPackageStartupMessages(library("sf"))
@@ -71,9 +71,9 @@ LandComp(x = square_data, aggregation_steps = 0:1)
 #> 2                      18 3.176364 1.0874836
 ```
 
-### Example for using regular hexagonal grid
+### Regular hexagonal grid data
 
-Let’s have a look at the hexagonal grid data.
+Have a look at the hexagonal grid data.
 
 ``` r
 data("hexagonal_data")

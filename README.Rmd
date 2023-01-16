@@ -33,11 +33,11 @@ Suggest we have data on some vegetation types along a landscape. Note, there are
 
 * the landscape data should be numeric binary, i.e. it should contain 0 or 1 values
 * the geometry of the landscape data should be a regular square or hexagonal grid
-* the geometry of the landscape data should have projected coordinates (i.e. WGS84 is useless)
+* the geometry of the landscape data should have projected coordinates (i.e. WGS84 is not eligible)
 
-### Example for using regular square grid
+### Regular square grid data
 
-Let's have a look at the square grid data.
+Have a look at the square grid data.
 
 ```{r square_data, echo = TRUE}
 suppressPackageStartupMessages(library("sf"))
@@ -53,9 +53,9 @@ Two values of CD and AS measuring landscape diversity and structure can be calcu
 LandComp(x = square_data, aggregation_steps = 0:1)
 ```
 
-### Example for using regular hexagonal grid
+### Regular hexagonal grid data
 
-Let's have a look at the hexagonal grid data.
+Have a look at the hexagonal grid data.
 
 ```{r hexagonal_data, echo = TRUE}
 data("hexagonal_data")

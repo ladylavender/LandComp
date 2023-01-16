@@ -14,30 +14,31 @@ LandComp(
 )
 }
 \arguments{
-\item{x}{An \code{sf} object of type \code{POLYGON} that must have projected
-coordinates (i.e. WGS-84 is not accepted). Geometry must be a regular
-spatial grid containing either squares or hexagons. Both flat topped and
-pointy topped hexagons are accepted. Fields should contain binary integer
-values (i.e., 0s and 1s). Logical values are coerced with warning.}
+\item{x}{An \code{sf} object of type \code{POLYGON} that must have projected coordinates
+(i.e. WGS-84 is not accepted). Geometry must be a regular spatial grid
+containing either squares or hexagons. Both flat topped and pointy topped
+hexagons are accepted. Fields should contain binary integer values (i.e., 0s
+and 1s). Logical values are coerced with warning.}
 
 \item{aggregation_steps}{A numeric vector containing non-negative numbers. The
 vector elements express the size of the spatial units for which calculation
 of compositional diversity and associatum is required. The size is measured
 by the number of rows of grid cells around the central grid cell, where 0
 means the original grid cell without enlargement. Analysis can be done more
-precise by giving also fraction numbers as input. In this case the following
-step's spatial unit minus its vertices are used as spatial base units. Note, in
-the case of hexagonal grid, steps falling in the interval ]0,1[ cannot be
-evaluated. Negative, non-finite and missing values are ignored with warning.}
+precise by giving also fraction numbers as input. In this case, the
+following step's spatial unit minus its vertices are used as spatial base
+units. Note, in the case of hexagonal grid, steps falling in the interval
+]0,1[ cannot be evaluated. Negative, non-finite and missing values are
+ignored with warning.}
 
 \item{parallelrun}{A logical vector of length one indicating whether
-aggregation should be performed in a parallel way (defaults to \code{TRUE}).
-All available processor cores are used in the case of parallel processing.
+aggregation should be performed in a parallel way (defaults to \code{TRUE}). All
+available processor cores are used in the case of parallel processing.
 Should be set to \code{FALSE} if memory limitation occurs.}
 
 \item{savememory}{A logical vector of length one indicating whether a slower
-but less memory-demanding algorithm should run (defaults to \code{FALSE}).
-Should be set to \code{TRUE} if the available memory is limited.}
+but less memory-demanding algorithm should run (defaults to \code{FALSE}). Should
+be set to \code{TRUE} if the available memory is limited.}
 
 \item{precision}{A numeric vector of length one. Number of digits to which the
 areas of grid cells are rounded. Should be decreased if the grid is not
@@ -51,7 +52,7 @@ columns and attribute:
 the number of rows of grid cells around the central grid cell. The content
 (and order) of this column is the same as the parameter
 \code{aggregation_steps} except that negative, non-finite and missing values
-are removed. It is a sort of ID in the resulted \code{data.frame}.
+are removed. It also serves as an ID in the resulting \code{data.frame}.
 \item \strong{SpatialUnit_Size}: number of grid cells contained by the aggregated,
 large unit.
 \item \strong{SpatialUnit_Area}: area of the aggregated, large unit
@@ -77,16 +78,16 @@ assumption of independence) and the observed diversity. Both functions have
 typically one maximum
 (\ifelse{html}{\out{CD<sub>max</sub>}}{\eqn{CD_{max}}},
 \ifelse{html}{\out{AS<sub>max</sub>}}{\eqn{AS_{max}}}), when plotting
-against scale. Unit sizes corresponding to the maxima values of both
-functions (\ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{CD}}},
+against increasing scale. Unit sizes corresponding to the maxima values of
+both functions (\ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{CD}}},
 \ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{AS}}}) help to capture the
 spatial scale holding the most information. These indices, particularly
 \ifelse{html}{\out{CD<sub>max</sub>}}{\eqn{CD_{max}}},
 \ifelse{html}{\out{AS<sub>max</sub>}}{\eqn{AS_{max}}} and
 \ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{CD}}} can be effectively used as
 indicators (Juhász-Nagy & Podani 1983). Though the functions were originally
-applied in community ecology, their application in landscape context can
-support assessment of landscapes.
+applied in community ecology, the current function supports their
+application in the landscape context.
 }
 \examples{
 data(square_data)
