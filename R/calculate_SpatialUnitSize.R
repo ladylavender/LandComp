@@ -8,13 +8,12 @@
 #'  which calculation of compositional diversity and associatum is required. The
 #'  size is measured by the number of rows of grid cells around the central grid
 #'  cell, where 0 means the original cell without enlargement. Fraction number
-#'  can be also set as input. In this case the following step's rosette minus
-#'  its vertices are used as spatial base units. Note, in the case of hexagonal
-#'  grid, steps falling in the interval ]0,1[ cannot be evaluated. Negative,
-#'  non-finite and missing values are ignored with warning.
-#'@param square A logical vector of length one. Should be `TRUE` if square
-#'  grid, `FALSE`, if is hexagonal grid is used as the basis of
-#'  calculation.
+#'  can be also set as input. In this case, the following step's spatial unit
+#'  minus grid cells touching the vertices are used as spatial base units. Note,
+#'  in the case of hexagonal grid, steps falling in the interval ]0,1[ cannot be
+#'  evaluated. Negative, non-finite and missing values are ignored with warning.
+#'@param square A logical vector of length one. Should be `TRUE` if square grid,
+#'  `FALSE`, if is hexagonal grid is used as the basis of calculation.
 #'
 #'@return A numeric vector of length one.
 #'@export

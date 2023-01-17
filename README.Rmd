@@ -29,7 +29,8 @@ devtools::install_github("ladylavender/LandComp")
 
 ## Example
 
-Suggest we have data on some vegetation types along a landscape. Note, there are three requirements:
+Example regular grids represent demonstrative spatial arrangements. They reflect a typical case when having presence/absence data on some landscape classes (e.g. vegetation types here) along a landscape. 
+Note, there are three requirements of using the `LandComp` package:
 
 * the landscape data should be numeric binary, i.e. it should contain 0 or 1 values
 * the geometry of the landscape data should be a regular square or hexagonal grid
@@ -37,7 +38,7 @@ Suggest we have data on some vegetation types along a landscape. Note, there are
 
 ### Regular square grid data
 
-Have a look at the square grid data.
+The structure and the visualization of the example square grid data:
 
 ```{r square_data, echo = TRUE}
 suppressPackageStartupMessages(library("sf"))
@@ -55,7 +56,7 @@ LandComp(x = square_data, aggregation_steps = 0:1)
 
 ### Regular hexagonal grid data
 
-Have a look at the hexagonal grid data.
+The structure and the visualization of the example hexagonal grid data:
 
 ```{r hexagonal_data, echo = TRUE}
 data("hexagonal_data")
@@ -66,3 +67,5 @@ str(hexagonal_data)
 ```{r hexagonal_example, echo=TRUE}
 LandComp(x = hexagonal_data, aggregation_steps = 0:1)
 ```
+
+For further information and examples, see `vignette("LandComp")` and `?LandComp`.

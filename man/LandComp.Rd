@@ -26,10 +26,10 @@ of compositional diversity and associatum is required. The size is measured
 by the number of rows of grid cells around the central grid cell, where 0
 means the original grid cell without enlargement. Analysis can be done more
 precise by giving also fraction numbers as input. In this case, the
-following step's spatial unit minus its vertices are used as spatial base
-units. Note, in the case of hexagonal grid, steps falling in the interval
-]0,1[ cannot be evaluated. Negative, non-finite and missing values are
-ignored with warning.}
+following step's spatial unit minus grid cells touching the vertices are
+used as spatial base units. Note, in the case of hexagonal grid, steps
+falling in the interval ]0,1[ cannot be evaluated. Negative, non-finite and
+missing values are ignored with warning.}
 
 \item{parallelrun}{A logical vector of length one indicating whether
 aggregation should be performed in a parallel way (defaults to \code{TRUE}). All
@@ -74,8 +74,8 @@ The function is based on the model family created by Juhász-Nagy
 class combinations. Associatum (\ifelse{html}{\out{AS}}{\eqn{AS}})
 characterizes the spatial dependence of landscape classes. It is measured as
 the difference of the "random" diversity (i.e. predicted diversity with the
-assumption of independence) and the observed diversity. Both functions have
-typically one maximum
+assumption of independent occurrence of landscape classes) and the observed
+diversity. Both functions have typically one maximum
 (\ifelse{html}{\out{CD<sub>max</sub>}}{\eqn{CD_{max}}},
 \ifelse{html}{\out{AS<sub>max</sub>}}{\eqn{AS_{max}}}), when plotting
 against increasing scale. Unit sizes corresponding to the maxima values of

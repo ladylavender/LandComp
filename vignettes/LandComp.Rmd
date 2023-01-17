@@ -61,7 +61,7 @@ filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandCo
 knitr::include_graphics(paste0(filepath, "/spatial_units_square.png"))
 ```
 
-**Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are produced. Spatial units of fraction aggregation steps are created by removing the spatial units containing the vertices of the spatial unit of the next aggregation step. A~s~ is the area of the square grid cell of the input data. 
+**Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the corners of the next integer unit. A~s~ is the area of the square grid cell of the input data. 
 
 The analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 
@@ -99,7 +99,7 @@ filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandCo
 knitr::include_graphics(paste0(filepath, "/spatial_units_hexagon.png"))
 ```
 
-**Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are produced. Spatial units of fraction aggregation steps are created by removing the spatial units containing the vertices of the spatial unit of the next aggregation step. A~h~ is the area of the hexagonal grid cell of the input data. 
+**Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the vertices of the next integer unit. A~h~ is the area of the hexagonal grid cell of the input data. 
 
 Analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 
