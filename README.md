@@ -37,6 +37,7 @@ The structure and the visualization of the example square grid data:
 
 ``` r
 suppressPackageStartupMessages(library("sf"))
+#> Warning: package 'sf' was built under R version 4.2.3
 library(LandComp)
 data("square_data")
 plot(square_data)
