@@ -6,11 +6,11 @@ citEntry(
   author   = as.person("Krisztina Dóra KONRÁD [aut], Ákos BEDE-FAZEKAS [aut], Sándor BARTHA [aut], Imelda SOMODI [aut"),
   journal  = "Landscape Ecology",
   year     = "2023",
-#  volume   = ,
+  volume   = "38",
 #  number   = ,
-#  pages    = ,
+  pages    = "2731–2747",
   url      = "https://doi.org/10.1007/s10980-023-01759-y",
-  textVersion = paste("Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023) Adapting a multiscale approach to assess the compositional diversity of landscapes. Landscape Ecology. https://doi.org/10.1007/s10980-023-01759-y"
+  textVersion = paste("Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023) Adapting a multiscale approach to assess the compositional diversity of landscapes. Landscape Ecology 38:2731–2747. https://doi.org/10.1007/s10980-023-01759-y"
 
   )
 )
