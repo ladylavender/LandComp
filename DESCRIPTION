@@ -23,7 +23,7 @@ Requirements regarding the input: binary data contained by a regular
     square or hexagonal grid, and the grid should have projected
     coordinates.
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Imports: 
     future,
     future.apply,
