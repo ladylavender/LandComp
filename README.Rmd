@@ -68,4 +68,4 @@ str(hexagonal_data)
 LandComp(x = hexagonal_data, aggregation_steps = 0:1)
 ```
 
-For further information and examples, see `vignette("LandComp")` and `?LandComp`.
+For further information and examples, see `vignette("LandComp")` and `?LandComp` after installing the package.
