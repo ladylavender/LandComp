@@ -307,3 +307,4 @@ LandComp <- function(x, aggregation_steps = c(0, 1, 1.5, 2:5), parallelrun = TRU
   attr(x = results, which = "unit") <- sf::st_crs(geometry)$units_gdal
   return(results)
 }
+
