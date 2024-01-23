@@ -110,5 +110,12 @@ LandComp(x = hexagonal_data, aggregation_steps = 0:1)
 #> 2                      16 3.422409 0.5394512
 ```
 
-For further information and examples, see `vignette("LandComp")` and
-`?LandComp` after installing the package.
+For further information and examples, see both `?LandComp` and
+`vignette("LandComp")` after installing the package.  
+Note, if you would like to view the vignette from R using the command
+`vignette("LandComp")`, you should install the package using the
+following command:
+
+``` r
+devtools::install_github("ladylavender/LandComp", build_vignettes = TRUE)
+```
