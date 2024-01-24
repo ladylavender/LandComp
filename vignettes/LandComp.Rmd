@@ -41,9 +41,8 @@ data("square_data")
 str(square_data)
 ```
 
-```{r out.width = '100%', echo = FALSE}
-filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
-knitr::include_graphics(paste0(filepath, "/README-square_data-1.png"))
+```{r square_data_plot, out.width = '100%', echo = FALSE}
+knitr::include_graphics(path = "../man/figures/README-square_data-1.png")
 ```
 
 **Fig. 1.** Visualization of the square grid data.
@@ -56,9 +55,8 @@ LandComp(x = square_data, aggregation_steps = 0)
 
 However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using a buffer of grid cells around the central grid cell, where 0 means the original cell without enlargement.
 
-```{r out.width = '50%', echo = FALSE}
-filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
-knitr::include_graphics(paste0(filepath, "/spatial_units_square.png"))
+```{r square_units_plot, out.width = '50%', echo = FALSE}
+knitr::include_graphics(path = "../man/figures/spatial_units_square.png")
 ```
 
 **Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the corners of the next integer unit. A~s~ is the area of the square grid cell of the input data. 
@@ -79,9 +77,8 @@ data("hexagonal_data")
 str(hexagonal_data)
 ```
 
-```{r out.width = '100%', echo = FALSE}
-filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
-knitr::include_graphics(paste0(filepath, "/README-hexagonal_data-1.png"))
+```{r hexagonal_data_plot, out.width = '100%', echo = FALSE}
+knitr::include_graphics(path = "../man/figures/README-hexagonal_data-1.png")
 ```
 
 **Fig. 3.** Visualization of the hexagonal grid data.
@@ -94,9 +91,8 @@ LandComp(x = hexagonal_data, aggregation_steps = 0)
 
 However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associatum (AS) should be calculated at multiple scales. For this purpose spatial units can be selected using a buffer of grid cells around the central grid cell, where 0 means the original cell without enlargement.
 
-```{r out.width = '50%', echo = FALSE}
-filepath = "C:/Users/Kriszti/Documents/Kutatas/Rcsomagfejlesztes/LandComp/LandComp/man/figures"
-knitr::include_graphics(paste0(filepath, "/spatial_units_hexagon.png"))
+```{r hexagonal_units_plot, out.width = '50%', echo = FALSE}
+knitr::include_graphics(path = "../man/figures/spatial_units_hexagon.png")
 ```
 
 **Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the vertices of the next integer unit. A~h~ is the area of the hexagonal grid cell of the input data. 
