@@ -1,7 +1,6 @@
 #' Sample vegetation data with hexagonal grid
 #'
 #' A generated dataset containing presences and absences of five vegetation types.
-#' Here is an example plot:
 #'
 #' @docType data
 #' @name hexagonal_data
