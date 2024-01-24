@@ -1,3 +1,3 @@
-# LandComp (development version)
+# LandComp 0.0.1
 
 * Initial CRAN submission.
