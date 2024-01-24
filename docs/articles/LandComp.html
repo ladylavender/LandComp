@@ -49,7 +49,14 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/ladylavender/LandComp/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -65,7 +72,7 @@
       <h1 data-toc-skip>LandComp</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/ladylavender/LandComp/blob/HEAD/vignettes/LandComp.Rmd" class="external-link"><code>vignettes/LandComp.Rmd</code></a></small>
       <div class="hidden name"><code>LandComp.Rmd</code></div>
 
     </div>
@@ -73,7 +80,7 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">LandComp</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ladylavender/LandComp" class="external-link">LandComp</a></span><span class="op">)</span></span></code></pre></div>
 <p>LandComp is a package for quantifying landscape diversity and
 structure at multiple scales. For these purposes Juhász-Nagy’s
 functions, i.e. compositional diversity (CD) and associatum (AS), are
@@ -97,7 +104,7 @@ hexagonal grid</li>
 <p>Have a look at the square grid data.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/message.html" class="external-link">suppressPackageStartupMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://r-spatial.github.io/sf/" class="external-link">"sf"</a></span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">LandComp</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ladylavender/LandComp" class="external-link">LandComp</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="st">"square_data"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">square_data</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Classes 'sf' and 'data.frame':   300 obs. of  6 variables:</span></span>

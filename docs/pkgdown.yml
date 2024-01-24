@@ -3,9 +3,5 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   LandComp: LandComp.html
-<<<<<<< HEAD
-last_built: 2024-01-23T21:38Z
-=======
-last_built: 2024-01-23T21:32Z
->>>>>>> b229b124248cfaaf980bd2f1ca24a61cfda8fa46
+last_built: 2024-01-24T17:13Z
 
