@@ -7,9 +7,9 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-4414-8766")),
     person("Ákos", "Bede-Fazekas", , "bfakos@ecolres.hu", role = c("aut", "cph"),
            comment = c(ORCID = "0000-0002-2905-338X")),
-    person("Sándor", "Bartha", , "bartha.sandor@ecolres.hu", role = c("aut", "cph"),
+    person("Sándor", "Bartha", , "bartha.sandor@ecolres.hu", role = c("cph"),
            comment = c(ORCID = "0000-0001-6331-7521")),
-    person("Imelda", "Somodi", , "somodi.imelda@ecolres.hu", role = c("aut", "cph"),
+    person("Imelda", "Somodi", , "somodi.imelda@ecolres.hu", role = c("cph"),
            comment = c(ORCID = "0000-0002-6207-3796"))
   )
 Description: Changes of landscape diversity and structure can be detected 
