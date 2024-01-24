@@ -12,7 +12,6 @@ data(hexagonal_data)
 }
 \description{
 A generated dataset containing presences and absences of five vegetation types.
-Here is an example plot:
 }
 \author{
 Krisztina Dora Konrad \email{konrad.krisztina@ecolres.hu}
