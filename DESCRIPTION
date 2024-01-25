@@ -9,7 +9,7 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-2905-338X")),
     person("Sándor", "Bartha", , "bartha.sandor@ecolres.hu", role = c("cph"),
            comment = c(ORCID = "0000-0001-6331-7521")),
-    person("Imelda", "Somodi", , "somodi.imelda@ecolres.hu", role = c("cph"),
+    person("Imelda", "Somodi", , "somodi.imelda@ecolres.hu", role = c("ccp", "cph"),
            comment = c(ORCID = "0000-0002-6207-3796"))
   )
 Description: Changes of landscape diversity and structure can be detected 
@@ -35,5 +35,5 @@ Depends:
     R (>= 2.10)
 LazyData: true
 VignetteBuilder: knitr
-URL: https://github.com/ladylavender/LandComp
+URL: https://github.com/ladylavender/LandComp, https://ladylavender.github.io/LandComp/
 BugReports: https://github.com/ladylavender/LandComp/issues
