@@ -111,9 +111,9 @@ of new models. Acta Bot Hung 30:363–402.
 spatial processes and succession. Vegetatio 51:129–140.
 }
 }
-\keyword{Juhász-Nagy's}
-\keyword{analysis,}
-\keyword{diversity,}
-\keyword{functions}
-\keyword{landscape}
-\keyword{multilayer}
+\keyword{"Juhász-Nagy's}
+\keyword{"landscape}
+\keyword{"multilayer}
+\keyword{analysis"}
+\keyword{diversity"}
+\keyword{functions"}

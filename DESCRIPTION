@@ -16,7 +16,7 @@ Description: Changes of landscape diversity and structure can be detected
     soon if relying on landscape class combinations and analysing patterns 
 	at multiple scales. LandComp provides such an opportunity, based on
     Juhász-Nagy's functions. Functions can handle multilayered data.
-Requirements of the input: binary data contained by a regular square 
+    Requirements of the input: binary data contained by a regular square 
 	or hexagonal grid, and the grid should have projected coordinates.
 License: MIT + file LICENSE
 Suggests: 
