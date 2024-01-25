@@ -4,11 +4,10 @@ bibentry(
   header   = "To cite LandComp in publications use:",
   textVersion = paste("Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023) Adapting a multiscale approach to assess the compositional diversity of landscapes. Landscape Ecology 38:2731–2747. https://doi.org/10.1007/s10980-023-01759-y",
   title    = "Adapting a multiscale approach to assess the compositional diversity of landscapes",
-  author   = as.person("Krisztina Dóra KONRÁD [aut, cre, cph], Ákos BEDE-FAZEKAS [aut, cph], Sándor BARTHA [aut, cph], Imelda SOMODI [aut, cph]"),
+  author   = as.person("Krisztina Dóra KONRÁD [cph], Ákos BEDE-FAZEKAS [cph], Sándor BARTHA [cph], Imelda SOMODI [cph]"),
   journal  = "Landscape Ecology",
   year     = "2023",
   volume   = "38",
-#  number   = ,
   pages    = "2731–2747",
   url      = "https://doi.org/10.1007/s10980-023-01759-y"
   )
