@@ -91,8 +91,7 @@ application in the landscape context.
 }
 \examples{
 data(square_data)
-LandComp(x = square_data, aggregation_steps = 0, parallelrun = FALSE)
-LandComp(x = square_data, aggregation_steps = c(0.5, 1, 1.5))
+LandComp(x = square_data, aggregation_steps = c(0, 0.5, 1))
 
 data(hexagonal_data)
 LandComp(x = hexagonal_data, aggregation_steps = c(0, 1, 1.5))

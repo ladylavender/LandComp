@@ -1,6 +1,10 @@
 
 <!-- Readme document of LandComp R package -->
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 # LandComp
 
 LandComp is a package for quantifying landscape diversity and structure
