@@ -1,10 +1,9 @@
 
 <!-- Readme document of LandComp R package -->
+<!-- badges: start -->
 
-\<\<\<\<\<\<\< HEAD <!-- badges: start -->
 [![R-CMD-check](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end --> \>\>\>\>\>\>\>
-a5ea2f47ef2e7704bcc820fe807a4f30a0c7eeeb
+<!-- badges: end -->
 
 # LandComp
 
@@ -115,9 +114,9 @@ LandComp(x = hexagonal_data, aggregation_steps = 0:1)
 #> 2                      16 3.422409 0.5394512
 ```
 
-For further information and examples, see both `?LandComp` and
-`vignette("LandComp")` after installing the package.  
-Note, if you would like to view the vignette from R using the command
+For further information and examples, see both the vignette of the
+package and `?LandComp` after installing the package.  
+Note, if you would like to view the vignette from R using the code
 `vignette("LandComp")`, you should install the package using the
 following command:
 

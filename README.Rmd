@@ -2,11 +2,9 @@
 output: github_document
 ---
 <!-- Readme document of LandComp R package -->
-<<<<<<< HEAD
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
->>>>>>> a5ea2f47ef2e7704bcc820fe807a4f30a0c7eeeb
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -73,8 +71,8 @@ str(hexagonal_data)
 LandComp(x = hexagonal_data, aggregation_steps = 0:1)
 ```
 
-For further information and examples, see both `?LandComp` and `vignette("LandComp")` after installing the package.  
-Note, if you would like to view the vignette from R using the command `vignette("LandComp")`, you should install the package using the following command:
+For further information and examples, see both the vignette of the package and `?LandComp` after installing the package.  
+Note, if you would like to view the vignette from R using the code `vignette("LandComp")`, you should install the package using the following command:
 
 ``` r
 devtools::install_github("ladylavender/LandComp", build_vignettes = TRUE)
