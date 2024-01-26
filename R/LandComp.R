@@ -68,7 +68,9 @@
 #'  applied in community ecology, the current function supports their
 #'  application in the landscape context.
 #'
-#'@keywords "landscape diversity" "multilayer analysis" "Juhász-Nagy's functions"
+#'@concept landscape diversity
+#'@concept multilayer analysis
+#'@concept Juhász-Nagy's functions
 #'
 #'@examples
 #' data(square_data)
