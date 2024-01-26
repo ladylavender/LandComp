@@ -1,13 +1,10 @@
 
 <!-- Readme document of LandComp R package -->
-<!-- badges: start -->
 
+\<\<\<\<\<\<\< HEAD <!-- badges: start -->
 [![R-CMD-check](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
-
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ladylavender/LandComp/actions/workflows/R-CMD-check.yaml)
-<!-- badges: end -->
+<!-- badges: end --> \>\>\>\>\>\>\>
+a5ea2f47ef2e7704bcc820fe807a4f30a0c7eeeb
 
 # LandComp
 
