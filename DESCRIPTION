@@ -4,9 +4,9 @@ Title: a package for analysing landscape composition and structure at
 Version: 0.0.1
 Authors@R: c(
     person(given = c("Krisztina", "Dóra"), family = "Konrád", email = "konrad.krisztina@ecolres.hu", role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0002-4414-8766")),
-    person(given = "Ákos", family = "Bede-Fazekas", role = c("aut", "cph"), comment = c(ORCID = "0000-0002-2905-338X")),
+    person(given = "Ákos", family = "Bede-Fazekas", role = c("aut", "ths", "cph"), comment = c(ORCID = "0000-0002-2905-338X")),
     person(given = "Sándor", family = "Bartha", role = c("cph"), comment = c(ORCID = "0000-0001-6331-7521")),
-    person(given = "Imelda", family = "Somodi", role = c("ccp", "cph"), comment = c(ORCID = "0000-0002-6207-3796")))
+    person(given = "Imelda", family = "Somodi", role = c("ccp", "ths", "cph"), comment = c(ORCID = "0000-0002-6207-3796")))
 Description: Changes of landscape diversity and structure can be detected 
     soon if relying on landscape class combinations and analysing patterns 
 	at multiple scales. LandComp provides such an opportunity, based on
