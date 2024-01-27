@@ -14,6 +14,6 @@ data(square_data)
 A generated dataset containing presences and absences of five vegetation types.
 }
 \author{
-Krisztina Dora Konrad \email{konrad.krisztina@ecolres.hu}
+Krisztina Dóra Konrád \email{konrad.krisztina@ecolres.hu}
 }
 \keyword{datasets}

@@ -6,7 +6,7 @@
 #' @name hexagonal_data
 #' @usage data(hexagonal_data)
 #' @format An `sf` object with 300 rows and 6 variables.
-#' @author Krisztina Dora Konrad \email{konrad.krisztina@@ecolres.hu}
+#' @author Krisztina Dóra Konrád \email{konrad.krisztina@@ecolres.hu}
 "hexagonal_data"
 
 
@@ -19,5 +19,5 @@
 #' @name square_data
 #' @usage data(square_data)
 #' @format An `sf` object with 300 rows and 6 variables.
-#' @author Krisztina Dora Konrad \email{konrad.krisztina@@ecolres.hu}
+#' @author Krisztina Dóra Konrád \email{konrad.krisztina@@ecolres.hu}
 "square_data"
