@@ -87,7 +87,7 @@ spatial scale holding the most information. These indices, particularly
 \ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{CD}}} can be effectively used as
 indicators (Juhász-Nagy & Podani 1983). Though the functions were originally
 applied in community ecology, the current function supports their
-application in the landscape context.
+application in the landscape context (see also Konrád et al. 2023).
 }
 \examples{
 data(square_data)
@@ -101,14 +101,17 @@ LandComp(x = hexagonal_data, aggregation_steps = c(0, 1, 1.5))
 \references{
 \itemize{
 \item Juhász-Nagy P (1976) Spatial dependence of plant populations. Part 1.
-Equivalence analysis (An outline of new model). Acta Bot Acad Sci Hung
-22:61–78.
+Equivalence analysis (An outline of new model). \emph{Acta Bot Acad Sci Hung 22}:
+61–78.
 \item Juhász-Nagy P (1984) Spatial dependence of plant population. 2. A family
-of new models. Acta Bot Hung 30:363–402.
-\item Juhász-Nagy P (1993) Notes on compositional diversity. Hydrobiologia
-249:173–182.
+of new models. \emph{Acta Bot Hung 30}: 363–402.
+\item Juhász-Nagy P (1993) Notes on compositional diversity. \emph{Hydrobiologia 249}:
+173–182.
 \item Juhász-Nagy P, Podani J (1983) Information theory methods for the study of
-spatial processes and succession. Vegetatio 51:129–140.
+spatial processes and succession. \emph{Vegetatio 51}: 129–140.
+\item Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023) Adapting a multiscale
+approach to assess the compositional diversity of landscapes. \emph{Landsc Ecol}
+\emph{38}: 2731–2747.
 }
 }
 \concept{Juhász-Nagy's functions}

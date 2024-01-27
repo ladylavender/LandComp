@@ -5,7 +5,7 @@
 \alias{hexagonal_data}
 \title{Sample vegetation data with hexagonal grid}
 \format{
-An "sf" object with 300 rows and 6 variables
+An \code{sf} object with 300 rows and 6 variables.
 }
 \usage{
 data(hexagonal_data)

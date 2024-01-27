@@ -66,7 +66,7 @@
 #'  \ifelse{html}{\out{A<sub>CD</sub>}}{\eqn{A_{CD}}} can be effectively used as
 #'  indicators (Juhász-Nagy & Podani 1983). Though the functions were originally
 #'  applied in community ecology, the current function supports their
-#'  application in the landscape context.
+#'  application in the landscape context (see also Konrád et al. 2023).
 #'
 #'@concept landscape diversity
 #'@concept multilayer analysis
@@ -82,14 +82,17 @@
 #'
 #'@references
 #' * Juhász-Nagy P (1976) Spatial dependence of plant populations. Part 1.
-#'Equivalence analysis (An outline of new model). Acta Bot Acad Sci Hung
-#'22:61–78.
+#'Equivalence analysis (An outline of new model). _Acta Bot Acad Sci Hung 22_:
+#'61–78.
 #' * Juhász-Nagy P (1984) Spatial dependence of plant population. 2. A family
-#'of new models. Acta Bot Hung 30:363–402.
-#' * Juhász-Nagy P (1993) Notes on compositional diversity. Hydrobiologia
-#'249:173–182.
+#'of new models. _Acta Bot Hung 30_: 363–402.
+#' * Juhász-Nagy P (1993) Notes on compositional diversity. _Hydrobiologia 249_:
+#'173–182.
 #' * Juhász-Nagy P, Podani J (1983) Information theory methods for the study of
-#'spatial processes and succession. Vegetatio 51:129–140.
+#'spatial processes and succession. _Vegetatio 51_: 129–140.
+#' * Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023) Adapting a multiscale
+#' approach to assess the compositional diversity of landscapes. _Landsc Ecol_
+#' _38_: 2731–2747.
 #'
 #'@export
 #'

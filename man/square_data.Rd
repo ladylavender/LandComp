@@ -5,7 +5,7 @@
 \alias{square_data}
 \title{Sample vegetation data with square grid}
 \format{
-An "sf" object with 300 rows and 6 variables
+An \code{sf} object with 300 rows and 6 variables.
 }
 \usage{
 data(square_data)
