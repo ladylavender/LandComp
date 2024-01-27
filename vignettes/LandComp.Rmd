@@ -45,7 +45,7 @@ str(square_data)
 knitr::include_graphics(path = "../man/figures/README-square_data-1.png")
 ```
 
-**Fig. 1.** Visualization of the square grid data.
+_**Fig. 1.** Visualization of the square grid data._
 
 CD and AS of the landscape at the scale of the base square grid (i.e. using the input grid cells as spatial units) can be calculated as
 
@@ -59,7 +59,7 @@ However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associa
 knitr::include_graphics(path = "../man/figures/spatial_units_square.png")
 ```
 
-**Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the corners of the next integer unit. A~s~ is the area of the square grid cell of the input data. 
+_**Fig. 2.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 9, 25, 49 etc. squares are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the corners of the next integer unit. A~s~ is the area of the square grid cell of the input data._ 
 
 The analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 
@@ -81,7 +81,7 @@ str(hexagonal_data)
 knitr::include_graphics(path = "../man/figures/README-hexagonal_data-1.png")
 ```
 
-**Fig. 3.** Visualization of the hexagonal grid data.
+_**Fig. 3.** Visualization of the hexagonal grid data._
 
 CD and AS of the landscape at the scale of the base hexagonal grid (i.e. using the input grid cells as spatial units) can be calculated as 
 
@@ -95,7 +95,7 @@ However, Juhász-Nagy's functions, i.e. compositional diversity (CD) and associa
 knitr::include_graphics(path = "../man/figures/spatial_units_hexagon.png")
 ```
 
-**Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the vertices of the next integer unit. A~h~ is the area of the hexagonal grid cell of the input data. 
+_**Fig. 4.** Main properties of the spatial units used for the calculation of Juhász-Nagy's functions. In the integer aggregation steps, radially enlarged spatial units consisting of 7, 19, 37 etc. hexagons are produced. Enlarged spatial units of fraction aggregation steps are created using the spatial unit of the next integer aggregation step, but excluding the grid cells that touch the vertices of the next integer unit. A~h~ is the area of the hexagonal grid cell of the input data._ 
 
 Analysis can be done more precise by giving also fraction numbers as input. Thus, the following values of CD and AS can be calculated as e.g.
 
