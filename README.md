@@ -9,7 +9,7 @@
 
 LandComp is a package for quantifying landscape diversity and structure
 at multiple scales. For these purposes Juhász-Nagy’s functions,
-i.e. compositional diversity (CD) and associatum (AS), are calculated
+i.e. compositional diversity (CD) and associatum (AS), are calculated.
 
 ## Installation
 
