@@ -1,18 +1,27 @@
 Package: LandComp
-Title: a package for analysing landscape composition and structure at
-    multiple scales
+Title: Analysing Landscape Composition and Structure at Multiple Scales
 Version: 0.0.3
 Authors@R: c(
     person(given = c("Krisztina", "Dóra"), family = "Konrád", email = "konrad.krisztina@ecolres.hu", role = c("aut", "cre", "cph"), comment = c(ORCID = "0000-0002-4414-8766")),
     person(given = "Ákos", family = "Bede-Fazekas", role = c("aut", "ths", "cph"), comment = c(ORCID = "0000-0002-2905-338X")),
     person(given = "Sándor", family = "Bartha", role = c("cph"), comment = c(ORCID = "0000-0001-6331-7521")),
     person(given = "Imelda", family = "Somodi", role = c("ccp", "ths", "cph"), comment = c(ORCID = "0000-0002-6207-3796")))
-Description: Changes of landscape diversity and structure can be detected 
-    soon if relying on landscape class combinations and analysing patterns 
-	at multiple scales. LandComp provides such an opportunity, based on
+Description: Changes of landscape diversity and structure can be detected
+    soon if relying on landscape class combinations and analysing patterns
+    at multiple scales. 'LandComp' provides such an opportunity, based on
     Juhász-Nagy's functions. Functions can handle multilayered data.
-    Requirements of the input: binary data contained by a regular square 
-	or hexagonal grid, and the grid should have projected coordinates.
+    Requirements of the input: binary data contained by a regular square
+    or hexagonal grid, and the grid should have projected coordinates.
+    Juhász-Nagy P (1976) "Spatial dependence of plant populations. Part 1.
+    Equivalence analysis (An outline of new model)"
+    <https:ricottalab.files.wordpress.com/2023/06/juhasz-nagy-1976.pdf>
+    Juhász-Nagy P (1984) "Spatial dependence of plant population. 2. A
+    family of new models"
+    <https:ricottalab.files.wordpress.com/2023/06/juhasz-nagy-1984b.pdf>
+    Juhász-Nagy P (1993) "Notes on compositional diversity"
+    <doi:10.1007/BF00008852>
+    Juhász-Nagy P, Podani J (1983) "Information theory methods for the
+    study of spatial processes and succession" <doi:10.1007/BF00129432>
 License: MIT + file LICENSE
 Suggests: 
     knitr,
