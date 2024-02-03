@@ -18,10 +18,11 @@ Description: Changes of landscape diversity and structure can be detected
     Juhász-Nagy P (1984) "Spatial dependence of plant population. 2. A
     family of new models"
     <https:ricottalab.files.wordpress.com/2023/06/juhasz-nagy-1984b.pdf>
-    Juhász-Nagy P (1993) "Notes on compositional diversity"
-    <doi:10.1007/BF00008852>
     Juhász-Nagy P, Podani J (1983) "Information theory methods for the
     study of spatial processes and succession" <doi:10.1007/BF00129432>
+    Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023) "Adapting a 
+    multiscale approach to assess the compositional diversity of landscapes"
+    <doi:10.1007/s10980-023-01759-y>
 License: MIT + file LICENSE
 Suggests: 
     knitr,
