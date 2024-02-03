@@ -93,7 +93,7 @@ application in the landscape context (see also Konrád et al. 2023).
 data(square_data)
 LandComp(x = square_data, aggregation_steps = 0)
 
-\dontrun{
+\donttest{
 LandComp(x = square_data, aggregation_steps = 0, parallelrun = FALSE)
 LandComp(x = square_data, aggregation_steps = c(0.5, 1, 1.5))
 
