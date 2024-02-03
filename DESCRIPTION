@@ -14,8 +14,8 @@ Description: Changes of landscape diversity and structure can be detected
     Requirements of the input: binary data contained by a regular square
     or hexagonal grid, and the grid should have projected coordinates.
     See also Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023)
-    "Adapting a multiscale approach to assess the compositional diversity
-    of landscapes" <doi:10.1007/s10980-023-01759-y> for details of using
+    'Adapting a multiscale approach to assess the compositional diversity
+    of landscapes' <doi:10.1007/s10980-023-01759-y> for details of using
     Juhász-Nagy's functions in landscape context.
 License: MIT + file LICENSE
 Suggests: 
