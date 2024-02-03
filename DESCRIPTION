@@ -9,20 +9,14 @@ Authors@R: c(
 Description: Changes of landscape diversity and structure can be detected
     soon if relying on landscape class combinations and analysing patterns
     at multiple scales. 'LandComp' provides such an opportunity, based on
-    Juhász-Nagy's functions. Functions can handle multilayered data.
+    Juhász-Nagy's functions (Juhász-Nagy P, Podani J 1983
+    <doi:10.1007/BF00129432>). Functions can handle multilayered data.
     Requirements of the input: binary data contained by a regular square
     or hexagonal grid, and the grid should have projected coordinates.
-    Juhász-Nagy P (1976) "Spatial dependence of plant populations. Part 1.
-    Equivalence analysis (An outline of new model)"
-    <https:ricottalab.files.wordpress.com/2023/06/juhasz-nagy-1976.pdf>
-    Juhász-Nagy P (1984) "Spatial dependence of plant population. 2. A
-    family of new models"
-    <https:ricottalab.files.wordpress.com/2023/06/juhasz-nagy-1984b.pdf>
-    Juhász-Nagy P, Podani J (1983) "Information theory methods for the
-    study of spatial processes and succession" <doi:10.1007/BF00129432>
-    Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023) "Adapting a 
-    multiscale approach to assess the compositional diversity of landscapes"
-    <doi:10.1007/s10980-023-01759-y>
+    See also Konrád KD, Bede-Fazekas Á, Bartha S, Somodi I (2023)
+    "Adapting a multiscale approach to assess the compositional diversity
+    of landscapes" <doi:10.1007/s10980-023-01759-y> for details of using
+    Juhász-Nagy's functions in landscape context.
 License: MIT + file LICENSE
 Suggests: 
     knitr,
