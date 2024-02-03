@@ -8,7 +8,7 @@ Authors@R: c(
     person(given = "Imelda", family = "Somodi", role = c("ccp", "ths", "cph"), comment = c(ORCID = "0000-0002-6207-3796")))
 Description: Changes of landscape diversity and structure can be detected
     soon if relying on landscape class combinations and analysing patterns
-    at multiple scales. `LandComp` provides such an opportunity, based on
+    at multiple scales. 'LandComp' provides such an opportunity, based on
     Juhász-Nagy's functions (Juhász-Nagy P, Podani J 1983
     <doi:10.1007/BF00129432>). Functions can handle multilayered data.
     Requirements of the input: binary data contained by a regular square

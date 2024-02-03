@@ -5,8 +5,4 @@
 ## Resubmission
 This is a resubmission. In this version I have:
 
-* changed title to 'Analysing Landscape Composition and Structure at Multiple Scales'
-* removed unnecessary spaces from the 'Description' field
-* put package names in single quotes
-* added reference in the 'Description' field
-* replaced \dontrun{} with \donttest{}
+* put package the name in undirected quotation marks in the description text
