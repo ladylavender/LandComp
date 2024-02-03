@@ -7,15 +7,14 @@
 
 # LandComp
 
-‘LandComp’ is a package for quantifying landscape diversity and
-structure at multiple scales. For these purposes Juhász-Nagy’s
-functions, i.e. compositional diversity (CD) and associatum (AS), are
-calculated.
+A package for quantifying landscape diversity and structure at multiple
+scales. For these purposes Juhász-Nagy’s functions, i.e. compositional
+diversity (CD) and associatum (AS), are calculated.
 
 ## Installation
 
-You can install the development version of LandComp using the following
-command:
+You can install the development version of `LandComp` using the
+following command:
 
 ``` r
 install.packages("devtools")
